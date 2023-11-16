@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+
+// Функция, принимающая объект класса string в качестве параметра
+void processString(const std::string& str) {
+    std::cout << "Длина строки: " << str.length() << std::endl;  // Выводим длину строки
+    std::cout << "Первый символ строки: " << str[0] << std::endl;  // Выводим первый символ строки
+    std::cout << "Последний символ строки: " << str[str.length() - 1] << std::endl;  // Выводим последний символ строки
+    std::cout << "Строка в обратном порядке: ";
+    for (int i = str.length() - 1; i >= 0; i--) {
+        std::cout << str[i];  // Выводим строку в обратном порядке
+    }
+    std::cout << std::endl;
+}
+
+int main() {
+    std::string myString = "Hello, World!";
+    processString(myString);  // Вызываем функцию processString, передавая ей myString в качестве аргумента
+
+    return 0;
+}
